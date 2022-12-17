@@ -1,0 +1,75 @@
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #13c09d;
+    color: white;
+    height: 300px;
+}
+header h1{
+    font-size: 46px;
+}
+header p{
+    font-size: 20px;
+}
+
+.container h4{
+    color: #201c1c;
+}
+input{
+    padding: 10px;
+    color: #201c1c;
+    width: 600px;
+}
+
+input[type=submit]{
+    color: white;
+    background-color:#13c09d;
+    padding: 15px;
+    border: none;
+    margin-left: 40%;
+    margin-top: 10px;
+    width: 150px;
+}
+input[type=submit]:hover{
+    color: white;
+    background-color: #08a787;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    margin-top: 50px;
+}
+.input-text{
+    padding: 30px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: justify;
+    color: #201c1c;
+}
+
+.summarize-text{
+    padding: 30px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: justify;
+    float: right;
+    color: black;
+    background-color: #ccc;
+}
+
+.text-center{
+    text-align: center;
+}

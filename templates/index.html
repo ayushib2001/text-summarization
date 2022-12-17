@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Auto Summarization</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="static/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  <header class="mb-5">
+    <h1 class="py-2">Auto Text Summarization</h1>
+    <p>Get the summary of your long text</p>
+  </header>
+  
+<div class="container">
+    <div class="d-flex flex-column justify-content-center align-items-center py-3 mb-5" id="url-link">
+      <h4 class="mb-3">LINK</h4>
+          <form method="POST" action="/analyze_url">
+            <input type="url" name="raw_url" id="raw_url"  placeholder="Paste your link here">
+            <br>
+            <input class="mt-4" type="submit" value="SUMMARIZE">
+          </form>
+    </div>
+    <div class="d-flex flex-column justify-content-center align-items-center py-3 mb-5" id = "text">
+      <h4 class="mb-3">INPUT TEXT</h4>
+      <form method="POST" action="/analyze_text">
+        <input type="text" name="raw_text" id="raw_text" placeholder="Paste your text here">
+        <br>
+        <input class = "mt-4" type="submit" value="SUMMARIZE">
+      </form>
+    </div>
+
+    <section>
+  
+        <div class="content">
+          <div class="summarize-text">
+            <h4 class="text-center mb-3">Summary</h4>
+            <div>
+                {{summary}}
+            </div>
+          </div>
+          <div class="input-text">
+            <h4 class="text-center mb-3">Input Text</h4>
+            <div>
+                {{input_text}}
+            </div>
+          </div>
+        </div>
+  
+    </section>
+</div>
+
+</body>
+</html>
